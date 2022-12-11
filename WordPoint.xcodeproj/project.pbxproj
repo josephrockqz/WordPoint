@@ -15,6 +15,7 @@
 		0B3C52F4294684AA0042C6E6 /* WordPointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3C52F3294684AA0042C6E6 /* WordPointTests.swift */; };
 		0B3C52FE294684AA0042C6E6 /* WordPointUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3C52FD294684AA0042C6E6 /* WordPointUITests.swift */; };
 		0B3C5300294684AA0042C6E6 /* WordPointUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3C52FF294684AA0042C6E6 /* WordPointUITestsLaunchTests.swift */; };
+		0B3C530D2946867F0042C6E6 /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3C530C2946867F0042C6E6 /* ARView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		0B3C52F9294684AA0042C6E6 /* WordPointUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordPointUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B3C52FD294684AA0042C6E6 /* WordPointUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordPointUITests.swift; sourceTree = "<group>"; };
 		0B3C52FF294684AA0042C6E6 /* WordPointUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordPointUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0B3C530C2946867F0042C6E6 /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				0B3C52E0294684A90042C6E6 /* AppDelegate.swift */,
+				0B3C530C2946867F0042C6E6 /* ARView.swift */,
 				0B3C52E2294684A90042C6E6 /* ContentView.swift */,
 				0B3C52E4294684A90042C6E6 /* Experience.rcproject */,
 				0B3C52E6294684AA0042C6E6 /* Assets.xcassets */,
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B3C52E3294684A90042C6E6 /* ContentView.swift in Sources */,
+				0B3C530D2946867F0042C6E6 /* ARView.swift in Sources */,
 				0B3C52E1294684A90042C6E6 /* AppDelegate.swift in Sources */,
 				0B3C52E5294684A90042C6E6 /* Experience.rcproject in Sources */,
 			);
@@ -431,6 +435,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -462,6 +467,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
