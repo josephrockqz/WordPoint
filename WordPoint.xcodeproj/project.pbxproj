@@ -16,6 +16,7 @@
 		0B3C52FE294684AA0042C6E6 /* WordPointUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3C52FD294684AA0042C6E6 /* WordPointUITests.swift */; };
 		0B3C5300294684AA0042C6E6 /* WordPointUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3C52FF294684AA0042C6E6 /* WordPointUITestsLaunchTests.swift */; };
 		0B3C530D2946867F0042C6E6 /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3C530C2946867F0042C6E6 /* ARView.swift */; };
+		0B3C5312294698440042C6E6 /* PlaneEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3C5311294698440042C6E6 /* PlaneEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,9 @@
 		0B3C52FD294684AA0042C6E6 /* WordPointUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordPointUITests.swift; sourceTree = "<group>"; };
 		0B3C52FF294684AA0042C6E6 /* WordPointUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordPointUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0B3C530C2946867F0042C6E6 /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
+		0B3C530E294693C40042C6E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0B3C530F2946940A0042C6E6 /* ttd.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ttd.txt; sourceTree = "<group>"; };
+		0B3C5311294698440042C6E6 /* PlaneEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 		0B3C52D4294684A90042C6E6 = {
 			isa = PBXGroup;
 			children = (
+				0B3C530F2946940A0042C6E6 /* ttd.txt */,
 				0B3C52DF294684A90042C6E6 /* WordPoint */,
 				0B3C52F2294684AA0042C6E6 /* WordPointTests */,
 				0B3C52FC294684AA0042C6E6 /* WordPointUITests */,
@@ -98,6 +103,8 @@
 		0B3C52DF294684A90042C6E6 /* WordPoint */ = {
 			isa = PBXGroup;
 			children = (
+				0B3C53102946982A0042C6E6 /* Model */,
+				0B3C530E294693C40042C6E6 /* Info.plist */,
 				0B3C52E0294684A90042C6E6 /* AppDelegate.swift */,
 				0B3C530C2946867F0042C6E6 /* ARView.swift */,
 				0B3C52E2294684A90042C6E6 /* ContentView.swift */,
@@ -131,6 +138,14 @@
 				0B3C52FF294684AA0042C6E6 /* WordPointUITestsLaunchTests.swift */,
 			);
 			path = WordPointUITests;
+			sourceTree = "<group>";
+		};
+		0B3C53102946982A0042C6E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0B3C5311294698440042C6E6 /* PlaneEnum.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +281,7 @@
 				0B3C52E3294684A90042C6E6 /* ContentView.swift in Sources */,
 				0B3C530D2946867F0042C6E6 /* ARView.swift in Sources */,
 				0B3C52E1294684A90042C6E6 /* AppDelegate.swift in Sources */,
+				0B3C5312294698440042C6E6 /* PlaneEnum.swift in Sources */,
 				0B3C52E5294684A90042C6E6 /* Experience.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,7 +444,8 @@
 				DEVELOPMENT_TEAM = 8TXZ7W2TYZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_FILE = WordPoint/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Augmented Reality";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
@@ -460,7 +477,8 @@
 				DEVELOPMENT_TEAM = 8TXZ7W2TYZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_FILE = WordPoint/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Augmented Reality";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;

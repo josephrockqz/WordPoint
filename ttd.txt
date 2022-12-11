@@ -1,0 +1,7 @@
+#  TTD
+
+- Settings:
+    - Option to place game grid on horizontal and/or vertical plane
+    
+- App onboarding:
+    - Prompt for initial selection of vertical and/or horizontal plane
