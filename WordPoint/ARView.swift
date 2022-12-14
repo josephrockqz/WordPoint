@@ -23,6 +23,8 @@ struct ARViewContainer: UIViewRepresentable {
         
         let arView = ARView(frame: .zero)
         
+//        arView.automaticallyConfigureSession = false
+        
         // Start AR session
         let session = arView.session
         let config = ARWorldTrackingConfiguration()
@@ -34,6 +36,7 @@ struct ARViewContainer: UIViewRepresentable {
         case .horizontalAndVertical:
             config.planeDetection = [.horizontal, .vertical]
         }
+//        config.environmentTexture = .automatic
         session.run(config)
 
         // Add coaching overlay
@@ -55,9 +58,9 @@ struct ARViewContainer: UIViewRepresentable {
 //        arView.debugOptions = [.showFeaturePoints, .showAnchorOrigins, .showAnchorGeometry, .showPhysics]
         #endif
         
-        // Load the "Box" scene from the "Experience" Reality File
-        // Add the box anchor to the scene
+        // Load the "Laser" scene from the "Experience" Reality File
         let laserAnchor = try! Experience.loadLaser()
+        // Add the laser anchor to the scene
         arView.scene.anchors.append(laserAnchor)
         
         // Handle ARSession events via delegate
@@ -97,6 +100,7 @@ struct ARViewContainer: UIViewRepresentable {
 
             // Create a new anchor to add content to
             let anchor = AnchorEntity()
+
             view.scene.anchors.append(anchor)
 
             // Add a dice entity
