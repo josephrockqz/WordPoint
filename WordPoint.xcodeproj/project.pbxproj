@@ -15,10 +15,12 @@
 		0B3C52F4294684AA0042C6E6 /* WordPointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3C52F3294684AA0042C6E6 /* WordPointTests.swift */; };
 		0B3C52FE294684AA0042C6E6 /* WordPointUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3C52FD294684AA0042C6E6 /* WordPointUITests.swift */; };
 		0B3C5300294684AA0042C6E6 /* WordPointUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3C52FF294684AA0042C6E6 /* WordPointUITestsLaunchTests.swift */; };
-		0B3C530D2946867F0042C6E6 /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3C530C2946867F0042C6E6 /* ARView.swift */; };
+		0B3C530D2946867F0042C6E6 /* ARDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3C530C2946867F0042C6E6 /* ARDisplayView.swift */; };
 		0B3C5312294698440042C6E6 /* PlaneEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3C5311294698440042C6E6 /* PlaneEnum.swift */; };
 		0B3C53152946C6840042C6E6 /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 0B3C53142946C6840042C6E6 /* FocusEntity */; };
 		0B3C5317294952660042C6E6 /* Dice.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0B3C5316294952660042C6E6 /* Dice.usdz */; };
+		0BDAB8452953C637004E9E99 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDAB8442953C637004E9E99 /* DataModel.swift */; };
+		0BDAB8472953C8D6004E9E99 /* ARUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDAB8462953C8D6004E9E99 /* ARUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,12 +52,14 @@
 		0B3C52F9294684AA0042C6E6 /* WordPointUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordPointUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B3C52FD294684AA0042C6E6 /* WordPointUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordPointUITests.swift; sourceTree = "<group>"; };
 		0B3C52FF294684AA0042C6E6 /* WordPointUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordPointUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		0B3C530C2946867F0042C6E6 /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
+		0B3C530C2946867F0042C6E6 /* ARDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDisplayView.swift; sourceTree = "<group>"; };
 		0B3C530E294693C40042C6E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0B3C530F2946940A0042C6E6 /* ttd.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ttd.txt; sourceTree = "<group>"; };
 		0B3C5311294698440042C6E6 /* PlaneEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneEnum.swift; sourceTree = "<group>"; };
 		0B3C5316294952660042C6E6 /* Dice.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Dice.usdz; sourceTree = "<group>"; };
 		0B3C531829495BD70042C6E6 /* LaserRed.reality */ = {isa = PBXFileReference; lastKnownFileType = file; path = LaserRed.reality; sourceTree = "<group>"; };
+		0BDAB8442953C637004E9E99 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		0BDAB8462953C8D6004E9E99 /* ARUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +116,8 @@
 				0B3C53102946982A0042C6E6 /* Model */,
 				0B3C530E294693C40042C6E6 /* Info.plist */,
 				0B3C52E0294684A90042C6E6 /* AppDelegate.swift */,
-				0B3C530C2946867F0042C6E6 /* ARView.swift */,
+				0BDAB8462953C8D6004E9E99 /* ARUIView.swift */,
+				0B3C530C2946867F0042C6E6 /* ARDisplayView.swift */,
 				0B3C52E2294684A90042C6E6 /* ContentView.swift */,
 				0B3C52E8294684AA0042C6E6 /* Preview Content */,
 			);
@@ -148,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				0B3C5311294698440042C6E6 /* PlaneEnum.swift */,
+				0BDAB8442953C637004E9E99 /* DataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -301,10 +307,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B3C52E3294684A90042C6E6 /* ContentView.swift in Sources */,
-				0B3C530D2946867F0042C6E6 /* ARView.swift in Sources */,
+				0B3C530D2946867F0042C6E6 /* ARDisplayView.swift in Sources */,
 				0B3C52E1294684A90042C6E6 /* AppDelegate.swift in Sources */,
 				0B3C5312294698440042C6E6 /* PlaneEnum.swift in Sources */,
+				0BDAB8472953C8D6004E9E99 /* ARUIView.swift in Sources */,
 				0B3C52E5294684A90042C6E6 /* Experience.rcproject in Sources */,
+				0BDAB8452953C637004E9E99 /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,16 +1,9 @@
 #  TTD
 
+- research what UIHostingController function does
+
 - Add laser to ARView
-    place
-
-- Figure out how entities and child entities work
-    - Have entities group hierarchically but can behave indepently of other child entities
-        - e.g. Having a specific tile exclusively change components/properties in response to user input
-
-- Figure out word game
-- Create protoype of game without complex/unique design
-- Get usdz files for letters/tiles/etc.
-    - Buy online || Delegate to connection || make myself
+    - have laser animation/behavior start from camera anchor
 
 - Settings:
     - Option to place game grid on horizontal and/or vertical plane

@@ -8,17 +8,14 @@
 import SwiftUI
 
 struct ContentView : View {
-    @State var page = "Home"
+    
+    @EnvironmentObject var data: DataModel
     
     var body: some View {
-        VStack {
-            if page == "Home" {
-                Button("Play Game") {
-                    self.page = "ARView"
-                }
-            } else if page == "ARView" {
-                ARViewContainer().edgesIgnoringSafeArea(.all)
-            }
+        HStack {
+            ARUIView()
+            if data.enableAR {ARDisplayView()}
+            else {Spacer()}
         }
     }
 }
@@ -27,6 +24,7 @@ struct ContentView : View {
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(DataModel.shared)
     }
 }
 #endif
