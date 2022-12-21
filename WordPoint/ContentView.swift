@@ -12,10 +12,14 @@ struct ContentView : View {
     @EnvironmentObject var data: DataModel
     
     var body: some View {
-        HStack {
-            ARUIView()
-            if data.enableAR {ARDisplayView()}
-            else {Spacer()}
+        VStack {
+            ARUIViewTop()
+            if data.enableAR {
+                ARDisplayView()
+            }
+            else {
+                Spacer()
+            }
         }
     }
 }

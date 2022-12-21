@@ -13,7 +13,7 @@ final class DataModel: ObservableObject {
     
     static var shared = DataModel()
     @Published var arView: ARView!
-    @Published var enableAR = false
+    @Published var enableAR = true
     // this will have to be dynamic based on stored value
     private var planePreference = PlanePreference.vertical
     

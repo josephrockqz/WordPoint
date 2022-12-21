@@ -1,8 +1,11 @@
 #  TTD
 
-- research what UIHostingController function does
+- Add buttons to ARView
+    - button at top to exit ARView
+    - button at bottom to fire laser
 
 - Add laser to ARView
+    - fires on button press
     - have laser animation/behavior start from camera anchor
 
 - Settings:

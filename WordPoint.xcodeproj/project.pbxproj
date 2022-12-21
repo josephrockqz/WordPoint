@@ -20,7 +20,7 @@
 		0B3C53152946C6840042C6E6 /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 0B3C53142946C6840042C6E6 /* FocusEntity */; };
 		0B3C5317294952660042C6E6 /* Dice.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0B3C5316294952660042C6E6 /* Dice.usdz */; };
 		0BDAB8452953C637004E9E99 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDAB8442953C637004E9E99 /* DataModel.swift */; };
-		0BDAB8472953C8D6004E9E99 /* ARUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDAB8462953C8D6004E9E99 /* ARUIView.swift */; };
+		0BDAB8472953C8D6004E9E99 /* ARUIViewTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDAB8462953C8D6004E9E99 /* ARUIViewTop.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +59,7 @@
 		0B3C5316294952660042C6E6 /* Dice.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Dice.usdz; sourceTree = "<group>"; };
 		0B3C531829495BD70042C6E6 /* LaserRed.reality */ = {isa = PBXFileReference; lastKnownFileType = file; path = LaserRed.reality; sourceTree = "<group>"; };
 		0BDAB8442953C637004E9E99 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
-		0BDAB8462953C8D6004E9E99 /* ARUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARUIView.swift; sourceTree = "<group>"; };
+		0BDAB8462953C8D6004E9E99 /* ARUIViewTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARUIViewTop.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +116,7 @@
 				0B3C53102946982A0042C6E6 /* Model */,
 				0B3C530E294693C40042C6E6 /* Info.plist */,
 				0B3C52E0294684A90042C6E6 /* AppDelegate.swift */,
-				0BDAB8462953C8D6004E9E99 /* ARUIView.swift */,
+				0BDAB8462953C8D6004E9E99 /* ARUIViewTop.swift */,
 				0B3C530C2946867F0042C6E6 /* ARDisplayView.swift */,
 				0B3C52E2294684A90042C6E6 /* ContentView.swift */,
 				0B3C52E8294684AA0042C6E6 /* Preview Content */,
@@ -310,7 +310,7 @@
 				0B3C530D2946867F0042C6E6 /* ARDisplayView.swift in Sources */,
 				0B3C52E1294684A90042C6E6 /* AppDelegate.swift in Sources */,
 				0B3C5312294698440042C6E6 /* PlaneEnum.swift in Sources */,
-				0BDAB8472953C8D6004E9E99 /* ARUIView.swift in Sources */,
+				0BDAB8472953C8D6004E9E99 /* ARUIViewTop.swift in Sources */,
 				0B3C52E5294684A90042C6E6 /* Experience.rcproject in Sources */,
 				0BDAB8452953C637004E9E99 /* DataModel.swift in Sources */,
 			);

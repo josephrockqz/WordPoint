@@ -7,25 +7,21 @@
 
 import SwiftUI
 
-struct ARUIView: View {
+struct ARUIViewTop: View {
     
     @EnvironmentObject var data: DataModel
     
     var body: some View {
-        List {
-            Toggle(isOn: $data.enableAR) {
-                Text("AR")
-            }
-            Text("Blahahaha")
-            Text("gratatata")
+        Button(action: {}) {
+            Text("AR")
         }
-        .frame(width: CGFloat(150))
+        .frame(height: CGFloat(50))
     }
 }
 
-struct ARView_Previews: PreviewProvider {
+struct ARViewTop_Previews: PreviewProvider {
     static var previews: some View {
-        ARUIView()
+        ARUIViewTop()
             .environmentObject(DataModel.shared)
     }
 }
