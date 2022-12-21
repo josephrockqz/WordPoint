@@ -15,7 +15,7 @@ struct ARViewContainer: UIViewRepresentable {
     // MARK: Properties
     
     // this will have to be dynamic based on stored value
-    private var planePreference = PlanePreference.horizontal
+    private var planePreference = PlanePreference.vertical
     
     // MARK: UIView Functions
     

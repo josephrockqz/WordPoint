@@ -1,6 +1,7 @@
 #  TTD
 
 - Add laser to ARView
+    place
 
 - Figure out how entities and child entities work
     - Have entities group hierarchically but can behave indepently of other child entities
