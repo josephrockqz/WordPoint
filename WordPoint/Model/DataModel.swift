@@ -26,29 +26,13 @@ final class DataModel: ObservableObject {
     init() {
         
         arView = ARView(frame: .zero)
+                
+        let config = ARWorldTrackingConfiguration()
+        config.addPlaneDetection()
         
-//        arView.automaticallyConfigureSession = false
-        
-//        // Start AR session
-//        let session = arView.session
-//        let config = ARWorldTrackingConfiguration()
-//        switch planePreference {
-//        case .horizontal:
-//            config.planeDetection = [.horizontal]
-//        case .vertical:
-//            config.planeDetection = [.vertical]
-//        case .horizontalAndVertical:
-//            config.planeDetection = [.horizontal, .vertical]
-//        }
-//        config.environmentTexture = .automatic
-//        session.run(config)
-        
+        arView.session.run(config)
         arView.addCoaching()
-
-//        // Set debug options
-//        #if DEBUG
-//        arView.debugOptions = [.showFeaturePoints, .showAnchorOrigins, .showAnchorGeometry, .showPhysics]
-//        #endif
+        arView.addDebugOptions()
         
         // Load the "Laser" scene from the "Experience" Reality File
         let laserAnchor = try! Experience.loadLaser()
@@ -87,6 +71,33 @@ extension ARView: ARCoachingOverlayViewDelegate {
                 coachingOverlay.goal = .anyPlane
         }
         self.addSubview(coachingOverlay)
+    }
+    
+}
+
+extension ARView {
+    
+    // Add debug options
+    func addDebugOptions() {
+        #if DEBUG
+        self.debugOptions = [.showFeaturePoints, .showAnchorOrigins, .showAnchorGeometry, .showPhysics]
+        #endif
+    }
+    
+}
+
+extension ARWorldTrackingConfiguration {
+    
+    // Add plane detection
+    func addPlaneDetection() {
+        switch planePreference {
+        case .horizontal:
+            self.planeDetection = [.horizontal]
+        case .vertical:
+            self.planeDetection = [.vertical]
+        case .horizontalAndVertical:
+            self.planeDetection = [.horizontal, .vertical]
+        }
     }
     
 }
