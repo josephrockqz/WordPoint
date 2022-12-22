@@ -14,8 +14,8 @@ import SwiftUI
  * Need  to account for users changing this setting and having to store
  * their choice for later sessions
  */
-// this will have to be dynamic based on stored value
 var planePreference = PlanePreference.vertical
+var automaticCoachingOverlay = true
 
 final class DataModel: ObservableObject {
     
@@ -59,6 +59,11 @@ extension ARView: ARCoachingOverlayViewDelegate {
     // Add coaching overlay
     func addCoaching() {
         let coachingOverlay = ARCoachingOverlayView()
+        // if user has coaching overlay turned off in settings, then skip
+        coachingOverlay.activatesAutomatically = automaticCoachingOverlay
+        if (coachingOverlay.activatesAutomatically == false) {
+            return
+        }
         coachingOverlay.delegate = self
         coachingOverlay.session = self.session
         coachingOverlay.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -71,6 +76,10 @@ extension ARView: ARCoachingOverlayViewDelegate {
                 coachingOverlay.goal = .anyPlane
         }
         self.addSubview(coachingOverlay)
+    }
+    
+    public func coachingOverlayViewDeactivate(_ coachingOverlayView: ARCoachingOverlayView) {
+        // TODO
     }
     
 }
