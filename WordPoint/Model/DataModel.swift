@@ -9,6 +9,8 @@ import ARKit
 import RealityKit
 import SwiftUI
 
+// MARK: Local Constants
+
 /**
  * This implementation may have to be thought out more
  * Need  to account for users changing this setting and having to store
@@ -32,12 +34,15 @@ final class DataModel: ObservableObject {
         
         arView.session.run(config)
         arView.addCoaching()
-        arView.addDebugOptions()
+//        arView.addDebugOptions()
         
-        // Load the "Laser" scene from the "Experience" Reality File
         let laserAnchor = try! Experience.loadLaser()
-        // Add the laser anchor to the scene
         arView.scene.anchors.append(laserAnchor)
+        
+//        let laserEntity = Experience.Laser()
+//        let cameraAnchor = AnchorEntity(.camera)
+//        cameraAnchor.addChild(laserEntity)
+//        arView.scene.addAnchor(cameraAnchor)
         
 //        // Handle ARSession events via delegate
 //        context.coordinator.view = arView
