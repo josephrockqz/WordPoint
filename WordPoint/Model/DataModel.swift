@@ -9,13 +9,19 @@ import ARKit
 import RealityKit
 import SwiftUI
 
+/**
+ * This implementation may have to be thought out more
+ * Need  to account for users changing this setting and having to store
+ * their choice for later sessions
+ */
+// this will have to be dynamic based on stored value
+var planePreference = PlanePreference.vertical
+
 final class DataModel: ObservableObject {
     
     static var shared = DataModel()
     @Published var arView: ARView!
     @Published var enableAR = true
-    // this will have to be dynamic based on stored value
-    private var planePreference = PlanePreference.vertical
     
     init() {
         
@@ -34,22 +40,10 @@ final class DataModel: ObservableObject {
 //        case .horizontalAndVertical:
 //            config.planeDetection = [.horizontal, .vertical]
 //        }
-////        config.environmentTexture = .automatic
+//        config.environmentTexture = .automatic
 //        session.run(config)
-
-//        // Add coaching overlay
-//        let coachingOverlay = ARCoachingOverlayView()
-//        coachingOverlay.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-//        coachingOverlay.session = session
-//        switch planePreference {
-//            case .horizontal:
-//                coachingOverlay.goal = .horizontalPlane
-//            case .vertical:
-//                coachingOverlay.goal = .verticalPlane
-//            case .horizontalAndVertical:
-//                coachingOverlay.goal = .anyPlane
-//        }
-//        arView.addSubview(coachingOverlay)
+        
+        arView.addCoaching()
 
 //        // Set debug options
 //        #if DEBUG
@@ -74,4 +68,25 @@ final class DataModel: ObservableObject {
 //        )
         
     }
+}
+
+extension ARView: ARCoachingOverlayViewDelegate {
+    
+    // Add coaching overlay
+    func addCoaching() {
+        let coachingOverlay = ARCoachingOverlayView()
+        coachingOverlay.delegate = self
+        coachingOverlay.session = self.session
+        coachingOverlay.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        switch planePreference {
+            case .horizontal:
+                coachingOverlay.goal = .horizontalPlane
+            case .vertical:
+                coachingOverlay.goal = .verticalPlane
+            case .horizontalAndVertical:
+                coachingOverlay.goal = .anyPlane
+        }
+        self.addSubview(coachingOverlay)
+    }
+    
 }

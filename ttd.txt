@@ -3,6 +3,8 @@
 - Add buttons to ARView
     - button at top to exit ARView
     - button at bottom to fire laser
+    
+- Add camera anchor AR view
 
 - Add laser to ARView
     - fires on button press
