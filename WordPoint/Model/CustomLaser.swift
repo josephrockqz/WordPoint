@@ -22,7 +22,7 @@ class CustomLaser: Entity, HasModel, HasAnchoring, HasPhysicsBody, HasCollision,
             ]
         )
         self.components[PhysicsBodyComponent.self] = PhysicsBodyComponent(
-            shapes: [.generateBox(width: 0.01, height: 0.01, depth: 2)], density: 1
+            shapes: [.generateBox(width: 0.01, height: 0.01, depth: 2)], density: 0.01
         )
         self.components[CollisionComponent.self] = CollisionComponent(
             shapes: [.generateBox(width: 0.01, height: 0.01, depth: 2)]
