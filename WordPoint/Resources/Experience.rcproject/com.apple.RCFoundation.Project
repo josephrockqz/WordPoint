@@ -32,7 +32,7 @@
                                       "configurationBox" : {
                                         "configuration" : {
                                           "angularCoefficient" : 1,
-                                          "duration" : 0.5,
+                                          "duration" : 1,
                                           "isTransformInitKeyPath" : true,
                                           "linearCoefficient" : 1,
                                           "location" : [
@@ -180,6 +180,20 @@
                             "typeName" : "String",
                             "value" : "LaserRed"
                           }
+                        ],
+                        [
+                          "rigidBody-enabled",
+                          {
+                            "typeName" : "Bool",
+                            "value" : false
+                          }
+                        ],
+                        [
+                          "rigidBody-motionType",
+                          {
+                            "typeName" : "REMotionType",
+                            "value" : "static"
+                          }
                         ]
                       ]
                     },
@@ -233,9 +247,9 @@
                   0.48755729198455811,
                   0.87122398614883423,
                   0,
-                  0.56975609064102173,
-                  1.1100775003433228,
-                  1.5398379564285278,
+                  0.47769826650619507,
+                  0.99900960922241211,
+                  1.6080242395401001,
                   1
                 ],
                 "sceneTransform" : [

@@ -1,29 +1,29 @@
 //
-//  ARUIView.swift
+//  ARUIViewBottom.swift
 //  WordPoint
 //
-//  Created by Joseph Rock on 12/21/22.
+//  Created by Joseph Rock on 12/23/22.
 //
 
 import SwiftUI
 
-struct ARUIViewTop: View {
+struct ARUIViewBottom: View {
     
     @EnvironmentObject var data: DataModel
     
     var body: some View {
         Button(action: {
-            data.enableAR = !data.enableAR
+            data.fireLaser()
         }) {
-            Text("AR")
+            Text("Laser")
         }
         .frame(height: CGFloat(50))
     }
 }
 
-struct ARUIViewTop_Previews: PreviewProvider {
+struct ARUIViewBottom_Previews: PreviewProvider {
     static var previews: some View {
-        ARUIViewTop()
+        ARUIViewBottom()
             .environmentObject(DataModel.shared)
     }
 }

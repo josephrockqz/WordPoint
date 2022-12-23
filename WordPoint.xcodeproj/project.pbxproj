@@ -21,6 +21,8 @@
 		0B3C5317294952660042C6E6 /* Dice.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0B3C5316294952660042C6E6 /* Dice.usdz */; };
 		0BDAB8452953C637004E9E99 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDAB8442953C637004E9E99 /* DataModel.swift */; };
 		0BDAB8472953C8D6004E9E99 /* ARUIViewTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDAB8462953C8D6004E9E99 /* ARUIViewTop.swift */; };
+		0BDAB84929562C5E004E9E99 /* ARUIViewBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDAB84829562C5E004E9E99 /* ARUIViewBottom.swift */; };
+		0BDAB84B29562E5A004E9E99 /* CustomLaser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDAB84A29562E5A004E9E99 /* CustomLaser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		0B3C531829495BD70042C6E6 /* LaserRed.reality */ = {isa = PBXFileReference; lastKnownFileType = file; path = LaserRed.reality; sourceTree = "<group>"; };
 		0BDAB8442953C637004E9E99 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		0BDAB8462953C8D6004E9E99 /* ARUIViewTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARUIViewTop.swift; sourceTree = "<group>"; };
+		0BDAB84829562C5E004E9E99 /* ARUIViewBottom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARUIViewBottom.swift; sourceTree = "<group>"; };
+		0BDAB84A29562E5A004E9E99 /* CustomLaser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLaser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,7 @@
 				0B3C53102946982A0042C6E6 /* Model */,
 				0B3C530E294693C40042C6E6 /* Info.plist */,
 				0B3C52E0294684A90042C6E6 /* AppDelegate.swift */,
+				0BDAB84829562C5E004E9E99 /* ARUIViewBottom.swift */,
 				0BDAB8462953C8D6004E9E99 /* ARUIViewTop.swift */,
 				0B3C530C2946867F0042C6E6 /* ARDisplayView.swift */,
 				0B3C52E2294684A90042C6E6 /* ContentView.swift */,
@@ -152,8 +157,9 @@
 		0B3C53102946982A0042C6E6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0B3C5311294698440042C6E6 /* PlaneEnum.swift */,
 				0BDAB8442953C637004E9E99 /* DataModel.swift */,
+				0B3C5311294698440042C6E6 /* PlaneEnum.swift */,
+				0BDAB84A29562E5A004E9E99 /* CustomLaser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -306,6 +312,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BDAB84B29562E5A004E9E99 /* CustomLaser.swift in Sources */,
+				0BDAB84929562C5E004E9E99 /* ARUIViewBottom.swift in Sources */,
 				0B3C52E3294684A90042C6E6 /* ContentView.swift in Sources */,
 				0B3C530D2946867F0042C6E6 /* ARDisplayView.swift in Sources */,
 				0B3C52E1294684A90042C6E6 /* AppDelegate.swift in Sources */,
@@ -399,7 +407,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -453,7 +461,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -479,9 +487,11 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -490,6 +500,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = joe.WordPoint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -512,9 +525,11 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -523,6 +538,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = joe.WordPoint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

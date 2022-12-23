@@ -12,7 +12,7 @@ struct ContentView : View {
     @EnvironmentObject var data: DataModel
     
     var body: some View {
-        VStack {
+        HStack {
             ARUIViewTop()
             if data.enableAR {
                 ARDisplayView()
@@ -20,6 +20,7 @@ struct ContentView : View {
             else {
                 Spacer()
             }
+            ARUIViewBottom()
         }
     }
 }

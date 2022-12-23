@@ -26,7 +26,7 @@ final class DataModel: ObservableObject {
     @Published var enableAR = true
     
     init() {
-        
+                
         arView = ARView(frame: .zero)
                 
         let config = ARWorldTrackingConfiguration()
@@ -35,14 +35,6 @@ final class DataModel: ObservableObject {
         arView.session.run(config)
         arView.addCoaching()
 //        arView.addDebugOptions()
-        
-        let laserAnchor = try! Experience.loadLaser()
-        arView.scene.anchors.append(laserAnchor)
-        
-//        let laserEntity = Experience.Laser()
-//        let cameraAnchor = AnchorEntity(.camera)
-//        cameraAnchor.addChild(laserEntity)
-//        arView.scene.addAnchor(cameraAnchor)
         
 //        // Handle ARSession events via delegate
 //        context.coordinator.view = arView
@@ -56,6 +48,19 @@ final class DataModel: ObservableObject {
 //            )
 //        )
         
+    }
+    
+    func fireLaser() {
+        print("hey")
+        
+        let xRandom = Float.random(in: -3.0...0)
+        let yRandom = Float.random(in: -3.0...0)
+        let zRandom = Float.random(in: -3.0...0)
+        let box = CustomLaser(color: .yellow, position: [xRandom, yRandom, zRandom])
+        arView.scene.anchors.append(box)
+        
+        let laserAnchor = try! Experience.loadLaser()
+        arView.scene.anchors.append(laserAnchor)
     }
 }
 
