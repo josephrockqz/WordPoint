@@ -38,7 +38,9 @@ final class DataModel: ObservableObject {
     
     func fireLaser() {
         let laser = CustomLaser()
-        arView.scene.anchors.append(laser)
+        let laserAnchor = AnchorEntity(.camera)
+        laserAnchor.addChild(laser)
+        arView.scene.addAnchor(laserAnchor)
     }
 }
 

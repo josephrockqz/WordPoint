@@ -12,6 +12,7 @@ class CustomLaser: Entity, HasModel, HasAnchoring, HasPhysicsBody, HasCollision,
     
     required init() {
         super.init()
+        
         self.components[ModelComponent.self] = ModelComponent(
             mesh: .generateBox(width: 0.01, height: 0.01, depth: 2, cornerRadius: 0.04),
             materials: [
@@ -30,6 +31,8 @@ class CustomLaser: Entity, HasModel, HasAnchoring, HasPhysicsBody, HasCollision,
         self.components[PhysicsMotionComponent.self] = PhysicsMotionComponent(
             linearVelocity: [0, 0, -10]
         )
+        
+        self.transform.translation = [0, 0, 0.5]
     }
     
 }

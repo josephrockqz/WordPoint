@@ -2,6 +2,8 @@
 
 - Add camera anchor AR view
     - have laser animation/behavior start from camera anchor
+    
+- Create crosshairs
 
 - Settings:
     - Option to place game grid on horizontal and/or vertical plane
