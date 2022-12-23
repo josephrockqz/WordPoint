@@ -1,16 +1,7 @@
 #  TTD
 
-- Add buttons to ARView
-    - button at top to exit ARView
-    - button at bottom to fire laser
-
 - Add camera anchor AR view
-
-- Add laser to ARView
-    - fires on button press
     - have laser animation/behavior start from camera anchor
-    - create laser with code instead of loading it from reality composer project
-        - create CustomLaser class/file in Model folder
 
 - Settings:
     - Option to place game grid on horizontal and/or vertical plane

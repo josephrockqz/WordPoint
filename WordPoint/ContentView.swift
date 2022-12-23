@@ -12,8 +12,8 @@ struct ContentView : View {
     @EnvironmentObject var data: DataModel
     
     var body: some View {
-        HStack {
-            ARUIViewTop()
+        VStack {
+//            ARUIViewTop()
             if data.enableAR {
                 ARDisplayView()
             }

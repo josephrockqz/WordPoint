@@ -8,25 +8,28 @@
 import RealityKit
 import SwiftUI
 
-class CustomLaser: Entity, HasModel, HasAnchoring, HasCollision {
+class CustomLaser: Entity, HasModel, HasAnchoring, HasPhysicsBody, HasCollision, HasPhysicsMotion {
     
-    required init(color: UIColor) {
+    required init() {
         super.init()
         self.components[ModelComponent.self] = ModelComponent(
-            mesh: .generateBox(size: 0.1),
-            materials: [SimpleMaterial(
-                color: color,
-                isMetallic: false)
+            mesh: .generateBox(width: 0.01, height: 0.01, depth: 2, cornerRadius: 0.04),
+            materials: [
+                SimpleMaterial(
+                    color: .red,
+                    isMetallic: false
+                )
             ]
+        )
+        self.components[PhysicsBodyComponent.self] = PhysicsBodyComponent(
+            shapes: [.generateBox(width: 0.01, height: 0.01, depth: 2)], density: 1
+        )
+        self.components[CollisionComponent.self] = CollisionComponent(
+            shapes: [.generateBox(width: 0.01, height: 0.01, depth: 2)]
+        )
+        self.components[PhysicsMotionComponent.self] = PhysicsMotionComponent(
+            linearVelocity: [0, 0, -10]
         )
     }
     
-    convenience init(color: UIColor, position: SIMD3<Float>) {
-        self.init(color: color)
-        self.position = position
-    }
-    
-    required init() {
-        fatalError("init() has not been implemented")
-    }
 }

@@ -37,13 +37,13 @@
                                           "linearCoefficient" : 1,
                                           "location" : [
                                             0,
-                                            5,
-                                            0
+                                            0,
+                                            -2.5
                                           ],
                                           "moveEase" : "easeIn",
                                           "respectPhysics" : false,
                                           "target" : [
-                                            "DA898ABA-4AB5-4CE7-95FA-E5D873C5C21C"
+                                            "D376F345-292F-4D06-9583-C464FB3DD9C7"
                                           ]
                                         },
                                         "name" : {
@@ -111,21 +111,30 @@
                   "7F5F1ADC-E5E4-4EF5-A5B5-FC43B071FFA5" : null,
                   "24B8680B-5142-4046-B026-AF539E91624C" : null,
                   "632E476F-1E55-4E30-9723-1C51DD2E8B89" : null,
-                  "923FDBB1-22F6-4862-94A9-8AD167095AD7" : {
+                  "923FDBB1-22F6-4862-94A9-8AD167095AD7" : null,
+                  "B91C7CA3-4AB1-4253-9A84-07383168A8A8" : null,
+                  "F75F53D3-2B87-4CB0-9A7B-9DE5FE3BFD8D" : {
                     "overrides" : {
                       "arguments" : [
                         [
-                          "diameter",
+                          "bevelRadius",
                           {
                             "typeName" : "Double",
-                            "value" : 0.01
+                            "value" : 0.040000000000000008
+                          }
+                        ],
+                        [
+                          "depth",
+                          {
+                            "typeName" : "Double",
+                            "value" : 0.29999999999999999
                           }
                         ],
                         [
                           "height",
                           {
                             "typeName" : "Double",
-                            "value" : 0.20000000000000001
+                            "value" : 0.01
                           }
                         ],
                         [
@@ -140,25 +149,25 @@
                           {
                             "typeName" : "double4",
                             "value" : [
-                              0.85000002384185791,
-                              0.17000000178813934,
-                              0.17000000178813934,
+                              0.55000001192092896,
+                              0.10999999940395355,
+                              0.10999999940395355,
                               1
                             ]
-                          }
-                        ],
-                        [
-                          "roundness",
-                          {
-                            "typeName" : "Double",
-                            "value" : 1
                           }
                         ],
                         [
                           "type",
                           {
                             "typeName" : "String",
-                            "value" : "capsule"
+                            "value" : "box"
+                          }
+                        ],
+                        [
+                          "width",
+                          {
+                            "typeName" : "Double",
+                            "value" : 0.01
                           }
                         ]
                       ],
@@ -171,28 +180,7 @@
                           "RuntimeIdentifier",
                           {
                             "typeName" : "UUID",
-                            "value" : "DA898ABA-4AB5-4CE7-95FA-E5D873C5C21C"
-                          }
-                        ],
-                        [
-                          "entityName",
-                          {
-                            "typeName" : "String",
-                            "value" : "LaserRed"
-                          }
-                        ],
-                        [
-                          "rigidBody-enabled",
-                          {
-                            "typeName" : "Bool",
-                            "value" : false
-                          }
-                        ],
-                        [
-                          "rigidBody-motionType",
-                          {
-                            "typeName" : "REMotionType",
-                            "value" : "static"
+                            "value" : "D376F345-292F-4D06-9583-C464FB3DD9C7"
                           }
                         ]
                       ]
@@ -204,21 +192,20 @@
                         0,
                         0,
                         0,
-                        5.9604641222676946e-08,
-                        -0.99999988079071045,
+                        1,
                         0,
                         0,
-                        0.99999988079071045,
-                        5.9604641222676946e-08,
                         0,
                         0,
-                        0.10000000149011612,
+                        1,
+                        0,
+                        0,
+                        0,
                         0,
                         1
                       ]
                     }
-                  },
-                  "B91C7CA3-4AB1-4253-9A84-07383168A8A8" : null
+                  }
                 },
                 "factory" : null,
                 "runtimeAttributes" : [
@@ -247,9 +234,9 @@
                   0.48755729198455811,
                   0.87122398614883423,
                   0,
-                  0.47769826650619507,
-                  0.99900960922241211,
-                  1.6080242395401001,
+                  0.29219383001327515,
+                  0.94629526138305664,
+                  1.6496751308441162,
                   1
                 ],
                 "sceneTransform" : [

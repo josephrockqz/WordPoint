@@ -26,7 +26,6 @@ final class DataModel: ObservableObject {
     @Published var enableAR = true
     
     init() {
-                
         arView = ARView(frame: .zero)
                 
         let config = ARWorldTrackingConfiguration()
@@ -35,32 +34,11 @@ final class DataModel: ObservableObject {
         arView.session.run(config)
         arView.addCoaching()
 //        arView.addDebugOptions()
-        
-//        // Handle ARSession events via delegate
-//        context.coordinator.view = arView
-//        session.delegate = context.coordinator
-//
-//        // Handle taps
-//        arView.addGestureRecognizer(
-//            UITapGestureRecognizer(
-//                target: context.coordinator,
-//                action: #selector(Coordinator.handleTap)
-//            )
-//        )
-        
     }
     
     func fireLaser() {
-        print("hey")
-        
-        let xRandom = Float.random(in: -3.0...0)
-        let yRandom = Float.random(in: -3.0...0)
-        let zRandom = Float.random(in: -3.0...0)
-        let box = CustomLaser(color: .yellow, position: [xRandom, yRandom, zRandom])
-        arView.scene.anchors.append(box)
-        
-        let laserAnchor = try! Experience.loadLaser()
-        arView.scene.anchors.append(laserAnchor)
+        let laser = CustomLaser()
+        arView.scene.anchors.append(laser)
     }
 }
 
@@ -89,7 +67,7 @@ extension ARView: ARCoachingOverlayViewDelegate {
     }
     
     public func coachingOverlayViewDeactivate(_ coachingOverlayView: ARCoachingOverlayView) {
-        // TODO
+        // MARK: TODO
     }
     
 }
