@@ -32,20 +32,26 @@ final class DataModel: ObservableObject {
         config.addPlaneDetection()
         
         arView.session.run(config)
-        arView.addCoaching()
 //        arView.addDebugOptions()
+        arView.addCoaching()
     }
     
     func fireLaser() {
-        let laser = CustomLaser()
-        let laserAnchor = AnchorEntity(.camera)
-        laserAnchor.addChild(laser)
-        arView.scene.addAnchor(laserAnchor)
+        let ball = CustomSphere()
+        let ballAnchor = AnchorEntity(.camera)
+        ballAnchor.addChild(ball)
+        arView.scene.addAnchor(ballAnchor)
+    }
+}
+
+extension ARView {
+    // fire sphere
+    func fireSphere() {
+        
     }
 }
 
 extension ARView: ARCoachingOverlayViewDelegate {
-    
     // Add coaching overlay
     func addCoaching() {
         let coachingOverlay = ARCoachingOverlayView()
@@ -71,22 +77,18 @@ extension ARView: ARCoachingOverlayViewDelegate {
     public func coachingOverlayViewDeactivate(_ coachingOverlayView: ARCoachingOverlayView) {
         // MARK: TODO
     }
-    
 }
 
 extension ARView {
-    
     // Add debug options
     func addDebugOptions() {
         #if DEBUG
         self.debugOptions = [.showFeaturePoints, .showAnchorOrigins, .showAnchorGeometry, .showPhysics]
         #endif
     }
-    
 }
 
 extension ARWorldTrackingConfiguration {
-    
     // Add plane detection
     func addPlaneDetection() {
         switch planePreference {
@@ -98,5 +100,4 @@ extension ARWorldTrackingConfiguration {
             self.planeDetection = [.horizontal, .vertical]
         }
     }
-    
 }

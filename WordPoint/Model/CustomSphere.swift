@@ -8,13 +8,13 @@
 import RealityKit
 import SwiftUI
 
-class CustomLaser: Entity, HasModel, HasAnchoring, HasPhysicsBody, HasCollision, HasPhysicsMotion {
+class CustomSphere: Entity, HasModel, HasAnchoring, HasPhysicsBody, HasCollision, HasPhysicsMotion {
     
     required init() {
         super.init()
         
         self.components[ModelComponent.self] = ModelComponent(
-            mesh: .generateBox(width: 0.01, height: 0.01, depth: 2, cornerRadius: 0.04),
+            mesh: .generateSphere(radius: 0.2),
             materials: [
                 SimpleMaterial(
                     color: .red,

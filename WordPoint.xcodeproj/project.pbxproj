@@ -20,7 +20,7 @@
 		0BDAB8452953C637004E9E99 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDAB8442953C637004E9E99 /* DataModel.swift */; };
 		0BDAB8472953C8D6004E9E99 /* ARUIViewTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDAB8462953C8D6004E9E99 /* ARUIViewTop.swift */; };
 		0BDAB84929562C5E004E9E99 /* ARUIViewBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDAB84829562C5E004E9E99 /* ARUIViewBottom.swift */; };
-		0BDAB84B29562E5A004E9E99 /* CustomLaser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDAB84A29562E5A004E9E99 /* CustomLaser.swift */; };
+		0BDAB84B29562E5A004E9E99 /* CustomSphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDAB84A29562E5A004E9E99 /* CustomSphere.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +60,7 @@
 		0BDAB8442953C637004E9E99 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		0BDAB8462953C8D6004E9E99 /* ARUIViewTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARUIViewTop.swift; sourceTree = "<group>"; };
 		0BDAB84829562C5E004E9E99 /* ARUIViewBottom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARUIViewBottom.swift; sourceTree = "<group>"; };
-		0BDAB84A29562E5A004E9E99 /* CustomLaser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLaser.swift; sourceTree = "<group>"; };
+		0BDAB84A29562E5A004E9E99 /* CustomSphere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSphere.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +153,7 @@
 		0B3C53102946982A0042C6E6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0BDAB84A29562E5A004E9E99 /* CustomLaser.swift */,
+				0BDAB84A29562E5A004E9E99 /* CustomSphere.swift */,
 				0BDAB8442953C637004E9E99 /* DataModel.swift */,
 				0B3C5311294698440042C6E6 /* PlaneEnum.swift */,
 			);
@@ -304,7 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BDAB84B29562E5A004E9E99 /* CustomLaser.swift in Sources */,
+				0BDAB84B29562E5A004E9E99 /* CustomSphere.swift in Sources */,
 				0BDAB84929562C5E004E9E99 /* ARUIViewBottom.swift in Sources */,
 				0B3C52E3294684A90042C6E6 /* ContentView.swift in Sources */,
 				0B3C530D2946867F0042C6E6 /* ARDisplayView.swift in Sources */,
