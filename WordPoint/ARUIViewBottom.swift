@@ -13,9 +13,9 @@ struct ARUIViewBottom: View {
     
     var body: some View {
         Button(action: {
-            data.fireLaser()
+            data.arView.fireSphere()
         }) {
-            Text("Laser")
+            Text("START")
         }
         .frame(height: CGFloat(50))
     }

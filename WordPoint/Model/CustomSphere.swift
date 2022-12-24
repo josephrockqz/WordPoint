@@ -32,7 +32,7 @@ class CustomSphere: Entity, HasModel, HasAnchoring, HasPhysicsBody, HasCollision
             linearVelocity: [0, 0, -10]
         )
         
-        self.transform.translation = [0, 0, 0.5]
+        self.transform.translation = [0, 0, -0.5]
     }
     
 }

@@ -35,19 +35,15 @@ final class DataModel: ObservableObject {
 //        arView.addDebugOptions()
         arView.addCoaching()
     }
-    
-    func fireLaser() {
-        let ball = CustomSphere()
-        let ballAnchor = AnchorEntity(.camera)
-        ballAnchor.addChild(ball)
-        arView.scene.addAnchor(ballAnchor)
-    }
 }
 
 extension ARView {
     // fire sphere
     func fireSphere() {
-        
+        let ball = CustomSphere()
+        let ballAnchor = AnchorEntity(.camera)
+        ballAnchor.addChild(ball)
+        self.scene.addAnchor(ballAnchor)
     }
 }
 
