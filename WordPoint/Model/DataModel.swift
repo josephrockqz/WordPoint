@@ -41,6 +41,23 @@ extension ARView {
     // fire sphere
     func fireSphere() {
         let ball = CustomSphere()
+        
+        let mesh = MeshResource.generateText(
+                    "JAH",
+                    extrusionDepth: 0.2,
+                    font: .systemFont(ofSize: 2),
+                    containerFrame: .zero,
+                    alignment: .center,
+                    lineBreakMode: .byTruncatingMiddle)
+                
+        let material = SimpleMaterial(color: .yellow, isMetallic: false)
+        let entity = ModelEntity(mesh: mesh, materials: [material])
+        entity.scale = SIMD3<Float>(0.3, 0.3, 1)
+        
+        ball.addChild(entity)
+        
+        entity.setPosition(SIMD3<Float>(-0.541, 0.05, 0), relativeTo: ball)
+        
         let ballAnchor = AnchorEntity(.camera)
         ballAnchor.addChild(ball)
         self.scene.addAnchor(ballAnchor)

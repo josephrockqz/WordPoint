@@ -29,7 +29,7 @@ class CustomSphere: Entity, HasModel, HasAnchoring, HasPhysicsBody, HasCollision
             shapes: [.generateBox(width: 0.01, height: 0.01, depth: 2)]
         )
         self.components[PhysicsMotionComponent.self] = PhysicsMotionComponent(
-            linearVelocity: [0, 0, -10]
+            linearVelocity: [0, 0, -1]
         )
         
         self.transform.translation = [0, 0, -0.5]
